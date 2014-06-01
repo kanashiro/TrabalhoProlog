@@ -36,7 +36,7 @@ public class TrabalhoProlog {
 		 PrologQuery query = new PrologQuery(baseProlog, pergunta2);
 		 PrologTerm[] solution = query.solution(); 
 		 
-                 System.out.print("Kanshiro");
+                 
                 
                  while(solution != null) 
 		 {
