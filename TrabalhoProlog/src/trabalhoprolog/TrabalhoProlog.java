@@ -36,8 +36,7 @@ public class TrabalhoProlog {
 		 PrologQuery query = new PrologQuery(baseProlog, pergunta2);
 		 PrologTerm[] solution = query.solution(); 
 		 
-                 
-                
+                 System.out.println("o");
                  while(solution != null) 
 		 {
 			 System.out.println(solution[0].getVariableValue()); 
