@@ -5,8 +5,11 @@
 package trabalhoprolog;
 
 import java.awt.Color;
+import java.awt.List;
+import java.util.ArrayList;
 import javax.swing.BorderFactory;
-import javax.swing.border.Border;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
 
 /**
  *
@@ -16,12 +19,14 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
 
     private String posicaoAnterior = "";
     private String jogada = "";
+    private ArrayList<JLabel> casas;
 
     /**
      * Creates new form TrabalhoDamas_Tabuleiro
      */
     public TrabalhoDamas_Tabuleiro() {
         initComponents();
+        this.casas = this.criarListaJLabel();
     }
 
     /**
@@ -36,69 +41,69 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        casa1_2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        casa1_4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        casa1_6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
+        casa1_8 = new javax.swing.JLabel();
+        casa2_1 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
+        casa2_3 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
+        casa2_5 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
+        casa2_7 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
+        casa3_2 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
-        jLabel21 = new javax.swing.JLabel();
+        casa3_4 = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
-        jLabel23 = new javax.swing.JLabel();
+        casa3_6 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
-        jLabel25 = new javax.swing.JLabel();
-        jLabel26 = new javax.swing.JLabel();
+        casa3_8 = new javax.swing.JLabel();
+        casa4_7 = new javax.swing.JLabel();
         jLabel27 = new javax.swing.JLabel();
-        jLabel28 = new javax.swing.JLabel();
+        casa4_5 = new javax.swing.JLabel();
         jLabel29 = new javax.swing.JLabel();
-        jLabel30 = new javax.swing.JLabel();
+        casa4_3 = new javax.swing.JLabel();
         jLabel31 = new javax.swing.JLabel();
-        jLabel32 = new javax.swing.JLabel();
+        casa4_1 = new javax.swing.JLabel();
         jLabel33 = new javax.swing.JLabel();
-        jLabel34 = new javax.swing.JLabel();
+        casa6_1 = new javax.swing.JLabel();
         jLabel35 = new javax.swing.JLabel();
-        jLabel36 = new javax.swing.JLabel();
+        casa5_2 = new javax.swing.JLabel();
         jLabel37 = new javax.swing.JLabel();
-        jLabel38 = new javax.swing.JLabel();
+        casa6_3 = new javax.swing.JLabel();
         jLabel39 = new javax.swing.JLabel();
-        jLabel40 = new javax.swing.JLabel();
+        casa5_4 = new javax.swing.JLabel();
         jLabel41 = new javax.swing.JLabel();
-        jLabel42 = new javax.swing.JLabel();
+        casa6_5 = new javax.swing.JLabel();
         jLabel43 = new javax.swing.JLabel();
-        jLabel44 = new javax.swing.JLabel();
+        casa5_6 = new javax.swing.JLabel();
         jLabel45 = new javax.swing.JLabel();
-        jLabel46 = new javax.swing.JLabel();
+        casa6_7 = new javax.swing.JLabel();
         jLabel47 = new javax.swing.JLabel();
-        jLabel48 = new javax.swing.JLabel();
+        casa5_8 = new javax.swing.JLabel();
         jLabel49 = new javax.swing.JLabel();
-        jLabel50 = new javax.swing.JLabel();
+        casa8_1 = new javax.swing.JLabel();
         jLabel51 = new javax.swing.JLabel();
-        jLabel52 = new javax.swing.JLabel();
+        casa7_2 = new javax.swing.JLabel();
         jLabel53 = new javax.swing.JLabel();
-        jLabel54 = new javax.swing.JLabel();
+        casa8_3 = new javax.swing.JLabel();
         jLabel55 = new javax.swing.JLabel();
-        jLabel56 = new javax.swing.JLabel();
+        casa7_4 = new javax.swing.JLabel();
         jLabel57 = new javax.swing.JLabel();
-        jLabel58 = new javax.swing.JLabel();
+        casa8_5 = new javax.swing.JLabel();
         jLabel59 = new javax.swing.JLabel();
-        jLabel60 = new javax.swing.JLabel();
+        casa7_6 = new javax.swing.JLabel();
         jLabel61 = new javax.swing.JLabel();
-        jLabel62 = new javax.swing.JLabel();
+        casa8_7 = new javax.swing.JLabel();
         jLabel63 = new javax.swing.JLabel();
-        jLabel64 = new javax.swing.JLabel();
+        casa7_8 = new javax.swing.JLabel();
         jLabel65 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -115,15 +120,15 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
         jLabel2.setPreferredSize(new java.awt.Dimension(80, 80));
         jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, -1, -1));
 
-        jLabel1.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/trabalhoprolog/Imagens/pecabranca.png"))); // NOI18N
-        jLabel1.setOpaque(true);
-        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+        casa1_2.setBackground(new java.awt.Color(0, 0, 0));
+        casa1_2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/trabalhoprolog/Imagens/pecabranca.png"))); // NOI18N
+        casa1_2.setOpaque(true);
+        casa1_2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel1MouseClicked(evt);
+                casa1_2MouseClicked(evt);
             }
         });
-        jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, -1, -1));
+        jPanel3.add(casa1_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, -1, -1));
 
         jLabel3.setBackground(new java.awt.Color(255, 255, 255));
         jLabel3.setMaximumSize(new java.awt.Dimension(80, 80));
@@ -132,15 +137,15 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
         jLabel3.setPreferredSize(new java.awt.Dimension(80, 80));
         jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 20, -1, -1));
 
-        jLabel4.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/trabalhoprolog/Imagens/pecabranca.png"))); // NOI18N
-        jLabel4.setOpaque(true);
-        jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
+        casa1_4.setBackground(new java.awt.Color(0, 0, 0));
+        casa1_4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/trabalhoprolog/Imagens/pecabranca.png"))); // NOI18N
+        casa1_4.setOpaque(true);
+        casa1_4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel4MouseClicked(evt);
+                casa1_4MouseClicked(evt);
             }
         });
-        jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 20, -1, -1));
+        jPanel3.add(casa1_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 20, -1, -1));
 
         jLabel5.setBackground(new java.awt.Color(255, 255, 255));
         jLabel5.setMaximumSize(new java.awt.Dimension(80, 80));
@@ -149,15 +154,15 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
         jLabel5.setPreferredSize(new java.awt.Dimension(80, 80));
         jPanel3.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 20, -1, -1));
 
-        jLabel6.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/trabalhoprolog/Imagens/pecabranca.png"))); // NOI18N
-        jLabel6.setOpaque(true);
-        jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
+        casa1_6.setBackground(new java.awt.Color(0, 0, 0));
+        casa1_6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/trabalhoprolog/Imagens/pecabranca.png"))); // NOI18N
+        casa1_6.setOpaque(true);
+        casa1_6.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel6MouseClicked(evt);
+                casa1_6MouseClicked(evt);
             }
         });
-        jPanel3.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 20, -1, -1));
+        jPanel3.add(casa1_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 20, -1, -1));
 
         jLabel7.setBackground(new java.awt.Color(255, 255, 255));
         jLabel7.setMaximumSize(new java.awt.Dimension(80, 80));
@@ -166,25 +171,25 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
         jLabel7.setPreferredSize(new java.awt.Dimension(80, 80));
         jPanel3.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 20, -1, -1));
 
-        jLabel8.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/trabalhoprolog/Imagens/pecabranca.png"))); // NOI18N
-        jLabel8.setOpaque(true);
-        jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
+        casa1_8.setBackground(new java.awt.Color(0, 0, 0));
+        casa1_8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/trabalhoprolog/Imagens/pecabranca.png"))); // NOI18N
+        casa1_8.setOpaque(true);
+        casa1_8.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel8MouseClicked(evt);
+                casa1_8MouseClicked(evt);
             }
         });
-        jPanel3.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 20, -1, -1));
+        jPanel3.add(casa1_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 20, -1, -1));
 
-        jLabel9.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/trabalhoprolog/Imagens/pecabranca.png"))); // NOI18N
-        jLabel9.setOpaque(true);
-        jLabel9.addMouseListener(new java.awt.event.MouseAdapter() {
+        casa2_1.setBackground(new java.awt.Color(0, 0, 0));
+        casa2_1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/trabalhoprolog/Imagens/pecabranca.png"))); // NOI18N
+        casa2_1.setOpaque(true);
+        casa2_1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel9MouseClicked(evt);
+                casa2_1MouseClicked(evt);
             }
         });
-        jPanel3.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, -1, -1));
+        jPanel3.add(casa2_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, -1, -1));
 
         jLabel10.setBackground(new java.awt.Color(255, 255, 255));
         jLabel10.setMaximumSize(new java.awt.Dimension(80, 80));
@@ -193,15 +198,15 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
         jLabel10.setPreferredSize(new java.awt.Dimension(80, 80));
         jPanel3.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, -1, -1));
 
-        jLabel11.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/trabalhoprolog/Imagens/pecabranca.png"))); // NOI18N
-        jLabel11.setOpaque(true);
-        jLabel11.addMouseListener(new java.awt.event.MouseAdapter() {
+        casa2_3.setBackground(new java.awt.Color(0, 0, 0));
+        casa2_3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/trabalhoprolog/Imagens/pecabranca.png"))); // NOI18N
+        casa2_3.setOpaque(true);
+        casa2_3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel11MouseClicked(evt);
+                casa2_3MouseClicked(evt);
             }
         });
-        jPanel3.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 100, -1, -1));
+        jPanel3.add(casa2_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 100, -1, -1));
 
         jLabel12.setBackground(new java.awt.Color(255, 255, 255));
         jLabel12.setMaximumSize(new java.awt.Dimension(80, 80));
@@ -210,15 +215,15 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
         jLabel12.setPreferredSize(new java.awt.Dimension(80, 80));
         jPanel3.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 100, -1, -1));
 
-        jLabel13.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/trabalhoprolog/Imagens/pecabranca.png"))); // NOI18N
-        jLabel13.setOpaque(true);
-        jLabel13.addMouseListener(new java.awt.event.MouseAdapter() {
+        casa2_5.setBackground(new java.awt.Color(0, 0, 0));
+        casa2_5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/trabalhoprolog/Imagens/pecabranca.png"))); // NOI18N
+        casa2_5.setOpaque(true);
+        casa2_5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel13MouseClicked(evt);
+                casa2_5MouseClicked(evt);
             }
         });
-        jPanel3.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 100, -1, -1));
+        jPanel3.add(casa2_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 100, -1, -1));
 
         jLabel14.setBackground(new java.awt.Color(255, 255, 255));
         jLabel14.setMaximumSize(new java.awt.Dimension(80, 80));
@@ -227,15 +232,15 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
         jLabel14.setPreferredSize(new java.awt.Dimension(80, 80));
         jPanel3.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 100, -1, -1));
 
-        jLabel15.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/trabalhoprolog/Imagens/pecabranca.png"))); // NOI18N
-        jLabel15.setOpaque(true);
-        jLabel15.addMouseListener(new java.awt.event.MouseAdapter() {
+        casa2_7.setBackground(new java.awt.Color(0, 0, 0));
+        casa2_7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/trabalhoprolog/Imagens/pecabranca.png"))); // NOI18N
+        casa2_7.setOpaque(true);
+        casa2_7.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel15MouseClicked(evt);
+                casa2_7MouseClicked(evt);
             }
         });
-        jPanel3.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 100, -1, -1));
+        jPanel3.add(casa2_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 100, -1, -1));
 
         jLabel16.setBackground(new java.awt.Color(255, 255, 255));
         jLabel16.setMaximumSize(new java.awt.Dimension(80, 80));
@@ -258,15 +263,15 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
         jLabel18.setPreferredSize(new java.awt.Dimension(80, 80));
         jPanel3.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 260, -1, -1));
 
-        jLabel19.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/trabalhoprolog/Imagens/pecabranca.png"))); // NOI18N
-        jLabel19.setOpaque(true);
-        jLabel19.addMouseListener(new java.awt.event.MouseAdapter() {
+        casa3_2.setBackground(new java.awt.Color(0, 0, 0));
+        casa3_2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/trabalhoprolog/Imagens/pecabranca.png"))); // NOI18N
+        casa3_2.setOpaque(true);
+        casa3_2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel19MouseClicked(evt);
+                casa3_2MouseClicked(evt);
             }
         });
-        jPanel3.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 180, -1, -1));
+        jPanel3.add(casa3_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 180, -1, -1));
 
         jLabel20.setBackground(new java.awt.Color(255, 255, 255));
         jLabel20.setMaximumSize(new java.awt.Dimension(80, 80));
@@ -275,15 +280,15 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
         jLabel20.setPreferredSize(new java.awt.Dimension(80, 80));
         jPanel3.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 180, -1, -1));
 
-        jLabel21.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/trabalhoprolog/Imagens/pecabranca.png"))); // NOI18N
-        jLabel21.setOpaque(true);
-        jLabel21.addMouseListener(new java.awt.event.MouseAdapter() {
+        casa3_4.setBackground(new java.awt.Color(0, 0, 0));
+        casa3_4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/trabalhoprolog/Imagens/pecabranca.png"))); // NOI18N
+        casa3_4.setOpaque(true);
+        casa3_4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel21MouseClicked(evt);
+                casa3_4MouseClicked(evt);
             }
         });
-        jPanel3.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 180, -1, -1));
+        jPanel3.add(casa3_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 180, -1, -1));
 
         jLabel22.setBackground(new java.awt.Color(255, 255, 255));
         jLabel22.setMaximumSize(new java.awt.Dimension(80, 80));
@@ -292,15 +297,15 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
         jLabel22.setPreferredSize(new java.awt.Dimension(80, 80));
         jPanel3.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 180, -1, -1));
 
-        jLabel23.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/trabalhoprolog/Imagens/pecabranca.png"))); // NOI18N
-        jLabel23.setOpaque(true);
-        jLabel23.addMouseListener(new java.awt.event.MouseAdapter() {
+        casa3_6.setBackground(new java.awt.Color(0, 0, 0));
+        casa3_6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/trabalhoprolog/Imagens/pecabranca.png"))); // NOI18N
+        casa3_6.setOpaque(true);
+        casa3_6.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel23MouseClicked(evt);
+                casa3_6MouseClicked(evt);
             }
         });
-        jPanel3.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 180, -1, -1));
+        jPanel3.add(casa3_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 180, -1, -1));
 
         jLabel24.setBackground(new java.awt.Color(255, 255, 255));
         jLabel24.setMaximumSize(new java.awt.Dimension(80, 80));
@@ -309,27 +314,27 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
         jLabel24.setPreferredSize(new java.awt.Dimension(80, 80));
         jPanel3.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 180, -1, -1));
 
-        jLabel25.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/trabalhoprolog/Imagens/pecabranca.png"))); // NOI18N
-        jLabel25.setOpaque(true);
-        jLabel25.addMouseListener(new java.awt.event.MouseAdapter() {
+        casa3_8.setBackground(new java.awt.Color(0, 0, 0));
+        casa3_8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/trabalhoprolog/Imagens/pecabranca.png"))); // NOI18N
+        casa3_8.setOpaque(true);
+        casa3_8.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel25MouseClicked(evt);
+                casa3_8MouseClicked(evt);
             }
         });
-        jPanel3.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 180, -1, -1));
+        jPanel3.add(casa3_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 180, -1, -1));
 
-        jLabel26.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel26.setMaximumSize(new java.awt.Dimension(80, 80));
-        jLabel26.setMinimumSize(new java.awt.Dimension(80, 80));
-        jLabel26.setOpaque(true);
-        jLabel26.setPreferredSize(new java.awt.Dimension(80, 80));
-        jLabel26.addMouseListener(new java.awt.event.MouseAdapter() {
+        casa4_7.setBackground(new java.awt.Color(0, 0, 0));
+        casa4_7.setMaximumSize(new java.awt.Dimension(80, 80));
+        casa4_7.setMinimumSize(new java.awt.Dimension(80, 80));
+        casa4_7.setOpaque(true);
+        casa4_7.setPreferredSize(new java.awt.Dimension(80, 80));
+        casa4_7.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel26MouseClicked(evt);
+                casa4_7MouseClicked(evt);
             }
         });
-        jPanel3.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 260, -1, -1));
+        jPanel3.add(casa4_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 260, -1, -1));
 
         jLabel27.setBackground(new java.awt.Color(255, 255, 255));
         jLabel27.setMaximumSize(new java.awt.Dimension(80, 80));
@@ -338,17 +343,17 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
         jLabel27.setPreferredSize(new java.awt.Dimension(80, 80));
         jPanel3.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 260, -1, -1));
 
-        jLabel28.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel28.setMaximumSize(new java.awt.Dimension(80, 80));
-        jLabel28.setMinimumSize(new java.awt.Dimension(80, 80));
-        jLabel28.setOpaque(true);
-        jLabel28.setPreferredSize(new java.awt.Dimension(80, 80));
-        jLabel28.addMouseListener(new java.awt.event.MouseAdapter() {
+        casa4_5.setBackground(new java.awt.Color(0, 0, 0));
+        casa4_5.setMaximumSize(new java.awt.Dimension(80, 80));
+        casa4_5.setMinimumSize(new java.awt.Dimension(80, 80));
+        casa4_5.setOpaque(true);
+        casa4_5.setPreferredSize(new java.awt.Dimension(80, 80));
+        casa4_5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel28MouseClicked(evt);
+                casa4_5MouseClicked(evt);
             }
         });
-        jPanel3.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 260, -1, -1));
+        jPanel3.add(casa4_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 260, -1, -1));
 
         jLabel29.setBackground(new java.awt.Color(255, 255, 255));
         jLabel29.setMaximumSize(new java.awt.Dimension(80, 80));
@@ -357,17 +362,17 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
         jLabel29.setPreferredSize(new java.awt.Dimension(80, 80));
         jPanel3.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 260, -1, -1));
 
-        jLabel30.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel30.setMaximumSize(new java.awt.Dimension(80, 80));
-        jLabel30.setMinimumSize(new java.awt.Dimension(80, 80));
-        jLabel30.setOpaque(true);
-        jLabel30.setPreferredSize(new java.awt.Dimension(80, 80));
-        jLabel30.addMouseListener(new java.awt.event.MouseAdapter() {
+        casa4_3.setBackground(new java.awt.Color(0, 0, 0));
+        casa4_3.setMaximumSize(new java.awt.Dimension(80, 80));
+        casa4_3.setMinimumSize(new java.awt.Dimension(80, 80));
+        casa4_3.setOpaque(true);
+        casa4_3.setPreferredSize(new java.awt.Dimension(80, 80));
+        casa4_3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel30MouseClicked(evt);
+                casa4_3MouseClicked(evt);
             }
         });
-        jPanel3.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 260, -1, -1));
+        jPanel3.add(casa4_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 260, -1, -1));
 
         jLabel31.setBackground(new java.awt.Color(255, 255, 255));
         jLabel31.setMaximumSize(new java.awt.Dimension(80, 80));
@@ -376,17 +381,17 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
         jLabel31.setPreferredSize(new java.awt.Dimension(80, 80));
         jPanel3.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 260, -1, -1));
 
-        jLabel32.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel32.setMaximumSize(new java.awt.Dimension(80, 80));
-        jLabel32.setMinimumSize(new java.awt.Dimension(80, 80));
-        jLabel32.setOpaque(true);
-        jLabel32.setPreferredSize(new java.awt.Dimension(80, 80));
-        jLabel32.addMouseListener(new java.awt.event.MouseAdapter() {
+        casa4_1.setBackground(new java.awt.Color(0, 0, 0));
+        casa4_1.setMaximumSize(new java.awt.Dimension(80, 80));
+        casa4_1.setMinimumSize(new java.awt.Dimension(80, 80));
+        casa4_1.setOpaque(true);
+        casa4_1.setPreferredSize(new java.awt.Dimension(80, 80));
+        casa4_1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel32MouseClicked(evt);
+                casa4_1MouseClicked(evt);
             }
         });
-        jPanel3.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 260, -1, -1));
+        jPanel3.add(casa4_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 260, -1, -1));
 
         jLabel33.setBackground(new java.awt.Color(255, 255, 255));
         jLabel33.setMaximumSize(new java.awt.Dimension(80, 80));
@@ -395,15 +400,15 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
         jLabel33.setPreferredSize(new java.awt.Dimension(80, 80));
         jPanel3.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 340, -1, -1));
 
-        jLabel34.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/trabalhoprolog/Imagens/pecaazul.png"))); // NOI18N
-        jLabel34.setOpaque(true);
-        jLabel34.addMouseListener(new java.awt.event.MouseAdapter() {
+        casa6_1.setBackground(new java.awt.Color(0, 0, 0));
+        casa6_1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/trabalhoprolog/Imagens/pecaazul.png"))); // NOI18N
+        casa6_1.setOpaque(true);
+        casa6_1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel34MouseClicked(evt);
+                casa6_1MouseClicked(evt);
             }
         });
-        jPanel3.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 420, -1, -1));
+        jPanel3.add(casa6_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 420, -1, -1));
 
         jLabel35.setBackground(new java.awt.Color(255, 255, 255));
         jLabel35.setMaximumSize(new java.awt.Dimension(80, 80));
@@ -412,17 +417,17 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
         jLabel35.setPreferredSize(new java.awt.Dimension(80, 80));
         jPanel3.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 420, -1, -1));
 
-        jLabel36.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel36.setMaximumSize(new java.awt.Dimension(80, 80));
-        jLabel36.setMinimumSize(new java.awt.Dimension(80, 80));
-        jLabel36.setOpaque(true);
-        jLabel36.setPreferredSize(new java.awt.Dimension(80, 80));
-        jLabel36.addMouseListener(new java.awt.event.MouseAdapter() {
+        casa5_2.setBackground(new java.awt.Color(0, 0, 0));
+        casa5_2.setMaximumSize(new java.awt.Dimension(80, 80));
+        casa5_2.setMinimumSize(new java.awt.Dimension(80, 80));
+        casa5_2.setOpaque(true);
+        casa5_2.setPreferredSize(new java.awt.Dimension(80, 80));
+        casa5_2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel36MouseClicked(evt);
+                casa5_2MouseClicked(evt);
             }
         });
-        jPanel3.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 340, -1, -1));
+        jPanel3.add(casa5_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 340, -1, -1));
 
         jLabel37.setBackground(new java.awt.Color(255, 255, 255));
         jLabel37.setMaximumSize(new java.awt.Dimension(80, 80));
@@ -431,15 +436,15 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
         jLabel37.setPreferredSize(new java.awt.Dimension(80, 80));
         jPanel3.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 340, -1, -1));
 
-        jLabel38.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/trabalhoprolog/Imagens/pecaazul.png"))); // NOI18N
-        jLabel38.setOpaque(true);
-        jLabel38.addMouseListener(new java.awt.event.MouseAdapter() {
+        casa6_3.setBackground(new java.awt.Color(0, 0, 0));
+        casa6_3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/trabalhoprolog/Imagens/pecaazul.png"))); // NOI18N
+        casa6_3.setOpaque(true);
+        casa6_3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel38MouseClicked(evt);
+                casa6_3MouseClicked(evt);
             }
         });
-        jPanel3.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 420, -1, -1));
+        jPanel3.add(casa6_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 420, -1, -1));
 
         jLabel39.setBackground(new java.awt.Color(255, 255, 255));
         jLabel39.setMaximumSize(new java.awt.Dimension(80, 80));
@@ -448,17 +453,17 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
         jLabel39.setPreferredSize(new java.awt.Dimension(80, 80));
         jPanel3.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 420, -1, -1));
 
-        jLabel40.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel40.setMaximumSize(new java.awt.Dimension(80, 80));
-        jLabel40.setMinimumSize(new java.awt.Dimension(80, 80));
-        jLabel40.setOpaque(true);
-        jLabel40.setPreferredSize(new java.awt.Dimension(80, 80));
-        jLabel40.addMouseListener(new java.awt.event.MouseAdapter() {
+        casa5_4.setBackground(new java.awt.Color(0, 0, 0));
+        casa5_4.setMaximumSize(new java.awt.Dimension(80, 80));
+        casa5_4.setMinimumSize(new java.awt.Dimension(80, 80));
+        casa5_4.setOpaque(true);
+        casa5_4.setPreferredSize(new java.awt.Dimension(80, 80));
+        casa5_4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel40MouseClicked(evt);
+                casa5_4MouseClicked(evt);
             }
         });
-        jPanel3.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 340, -1, -1));
+        jPanel3.add(casa5_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 340, -1, -1));
 
         jLabel41.setBackground(new java.awt.Color(255, 255, 255));
         jLabel41.setMaximumSize(new java.awt.Dimension(80, 80));
@@ -467,15 +472,15 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
         jLabel41.setPreferredSize(new java.awt.Dimension(80, 80));
         jPanel3.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 340, -1, -1));
 
-        jLabel42.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/trabalhoprolog/Imagens/pecaazul.png"))); // NOI18N
-        jLabel42.setOpaque(true);
-        jLabel42.addMouseListener(new java.awt.event.MouseAdapter() {
+        casa6_5.setBackground(new java.awt.Color(0, 0, 0));
+        casa6_5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/trabalhoprolog/Imagens/pecaazul.png"))); // NOI18N
+        casa6_5.setOpaque(true);
+        casa6_5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel42MouseClicked(evt);
+                casa6_5MouseClicked(evt);
             }
         });
-        jPanel3.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 420, -1, -1));
+        jPanel3.add(casa6_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 420, -1, -1));
 
         jLabel43.setBackground(new java.awt.Color(255, 255, 255));
         jLabel43.setMaximumSize(new java.awt.Dimension(80, 80));
@@ -484,17 +489,17 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
         jLabel43.setPreferredSize(new java.awt.Dimension(80, 80));
         jPanel3.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 420, -1, -1));
 
-        jLabel44.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel44.setMaximumSize(new java.awt.Dimension(80, 80));
-        jLabel44.setMinimumSize(new java.awt.Dimension(80, 80));
-        jLabel44.setOpaque(true);
-        jLabel44.setPreferredSize(new java.awt.Dimension(80, 80));
-        jLabel44.addMouseListener(new java.awt.event.MouseAdapter() {
+        casa5_6.setBackground(new java.awt.Color(0, 0, 0));
+        casa5_6.setMaximumSize(new java.awt.Dimension(80, 80));
+        casa5_6.setMinimumSize(new java.awt.Dimension(80, 80));
+        casa5_6.setOpaque(true);
+        casa5_6.setPreferredSize(new java.awt.Dimension(80, 80));
+        casa5_6.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel44MouseClicked(evt);
+                casa5_6MouseClicked(evt);
             }
         });
-        jPanel3.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 340, -1, -1));
+        jPanel3.add(casa5_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 340, -1, -1));
 
         jLabel45.setBackground(new java.awt.Color(255, 255, 255));
         jLabel45.setMaximumSize(new java.awt.Dimension(80, 80));
@@ -503,15 +508,15 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
         jLabel45.setPreferredSize(new java.awt.Dimension(80, 80));
         jPanel3.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 340, -1, -1));
 
-        jLabel46.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel46.setIcon(new javax.swing.ImageIcon(getClass().getResource("/trabalhoprolog/Imagens/pecaazul.png"))); // NOI18N
-        jLabel46.setOpaque(true);
-        jLabel46.addMouseListener(new java.awt.event.MouseAdapter() {
+        casa6_7.setBackground(new java.awt.Color(0, 0, 0));
+        casa6_7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/trabalhoprolog/Imagens/pecaazul.png"))); // NOI18N
+        casa6_7.setOpaque(true);
+        casa6_7.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel46MouseClicked(evt);
+                casa6_7MouseClicked(evt);
             }
         });
-        jPanel3.add(jLabel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 420, -1, -1));
+        jPanel3.add(casa6_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 420, -1, -1));
 
         jLabel47.setBackground(new java.awt.Color(255, 255, 255));
         jLabel47.setMaximumSize(new java.awt.Dimension(80, 80));
@@ -520,17 +525,17 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
         jLabel47.setPreferredSize(new java.awt.Dimension(80, 80));
         jPanel3.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 420, -1, -1));
 
-        jLabel48.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel48.setMaximumSize(new java.awt.Dimension(80, 80));
-        jLabel48.setMinimumSize(new java.awt.Dimension(80, 80));
-        jLabel48.setOpaque(true);
-        jLabel48.setPreferredSize(new java.awt.Dimension(80, 80));
-        jLabel48.addMouseListener(new java.awt.event.MouseAdapter() {
+        casa5_8.setBackground(new java.awt.Color(0, 0, 0));
+        casa5_8.setMaximumSize(new java.awt.Dimension(80, 80));
+        casa5_8.setMinimumSize(new java.awt.Dimension(80, 80));
+        casa5_8.setOpaque(true);
+        casa5_8.setPreferredSize(new java.awt.Dimension(80, 80));
+        casa5_8.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel48MouseClicked(evt);
+                casa5_8MouseClicked(evt);
             }
         });
-        jPanel3.add(jLabel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 340, -1, -1));
+        jPanel3.add(casa5_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 340, -1, -1));
 
         jLabel49.setBackground(new java.awt.Color(255, 255, 255));
         jLabel49.setMaximumSize(new java.awt.Dimension(80, 80));
@@ -539,15 +544,15 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
         jLabel49.setPreferredSize(new java.awt.Dimension(80, 80));
         jPanel3.add(jLabel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 500, -1, -1));
 
-        jLabel50.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel50.setIcon(new javax.swing.ImageIcon(getClass().getResource("/trabalhoprolog/Imagens/pecaazul.png"))); // NOI18N
-        jLabel50.setOpaque(true);
-        jLabel50.addMouseListener(new java.awt.event.MouseAdapter() {
+        casa8_1.setBackground(new java.awt.Color(0, 0, 0));
+        casa8_1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/trabalhoprolog/Imagens/pecaazul.png"))); // NOI18N
+        casa8_1.setOpaque(true);
+        casa8_1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel50MouseClicked(evt);
+                casa8_1MouseClicked(evt);
             }
         });
-        jPanel3.add(jLabel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 580, -1, -1));
+        jPanel3.add(casa8_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 580, -1, -1));
 
         jLabel51.setBackground(new java.awt.Color(255, 255, 255));
         jLabel51.setMaximumSize(new java.awt.Dimension(80, 80));
@@ -556,15 +561,15 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
         jLabel51.setPreferredSize(new java.awt.Dimension(80, 80));
         jPanel3.add(jLabel51, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 580, -1, -1));
 
-        jLabel52.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel52.setIcon(new javax.swing.ImageIcon(getClass().getResource("/trabalhoprolog/Imagens/pecaazul.png"))); // NOI18N
-        jLabel52.setOpaque(true);
-        jLabel52.addMouseListener(new java.awt.event.MouseAdapter() {
+        casa7_2.setBackground(new java.awt.Color(0, 0, 0));
+        casa7_2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/trabalhoprolog/Imagens/pecaazul.png"))); // NOI18N
+        casa7_2.setOpaque(true);
+        casa7_2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel52MouseClicked(evt);
+                casa7_2MouseClicked(evt);
             }
         });
-        jPanel3.add(jLabel52, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 500, -1, -1));
+        jPanel3.add(casa7_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 500, -1, -1));
 
         jLabel53.setBackground(new java.awt.Color(255, 255, 255));
         jLabel53.setMaximumSize(new java.awt.Dimension(80, 80));
@@ -573,15 +578,15 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
         jLabel53.setPreferredSize(new java.awt.Dimension(80, 80));
         jPanel3.add(jLabel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 500, -1, -1));
 
-        jLabel54.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel54.setIcon(new javax.swing.ImageIcon(getClass().getResource("/trabalhoprolog/Imagens/pecaazul.png"))); // NOI18N
-        jLabel54.setOpaque(true);
-        jLabel54.addMouseListener(new java.awt.event.MouseAdapter() {
+        casa8_3.setBackground(new java.awt.Color(0, 0, 0));
+        casa8_3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/trabalhoprolog/Imagens/pecaazul.png"))); // NOI18N
+        casa8_3.setOpaque(true);
+        casa8_3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel54MouseClicked(evt);
+                casa8_3MouseClicked(evt);
             }
         });
-        jPanel3.add(jLabel54, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 580, -1, -1));
+        jPanel3.add(casa8_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 580, -1, -1));
 
         jLabel55.setBackground(new java.awt.Color(255, 255, 255));
         jLabel55.setMaximumSize(new java.awt.Dimension(80, 80));
@@ -590,15 +595,15 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
         jLabel55.setPreferredSize(new java.awt.Dimension(80, 80));
         jPanel3.add(jLabel55, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 580, -1, -1));
 
-        jLabel56.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel56.setIcon(new javax.swing.ImageIcon(getClass().getResource("/trabalhoprolog/Imagens/pecaazul.png"))); // NOI18N
-        jLabel56.setOpaque(true);
-        jLabel56.addMouseListener(new java.awt.event.MouseAdapter() {
+        casa7_4.setBackground(new java.awt.Color(0, 0, 0));
+        casa7_4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/trabalhoprolog/Imagens/pecaazul.png"))); // NOI18N
+        casa7_4.setOpaque(true);
+        casa7_4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel56MouseClicked(evt);
+                casa7_4MouseClicked(evt);
             }
         });
-        jPanel3.add(jLabel56, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 500, -1, -1));
+        jPanel3.add(casa7_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 500, -1, -1));
 
         jLabel57.setBackground(new java.awt.Color(255, 255, 255));
         jLabel57.setMaximumSize(new java.awt.Dimension(80, 80));
@@ -607,15 +612,15 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
         jLabel57.setPreferredSize(new java.awt.Dimension(80, 80));
         jPanel3.add(jLabel57, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 500, -1, -1));
 
-        jLabel58.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel58.setIcon(new javax.swing.ImageIcon(getClass().getResource("/trabalhoprolog/Imagens/pecaazul.png"))); // NOI18N
-        jLabel58.setOpaque(true);
-        jLabel58.addMouseListener(new java.awt.event.MouseAdapter() {
+        casa8_5.setBackground(new java.awt.Color(0, 0, 0));
+        casa8_5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/trabalhoprolog/Imagens/pecaazul.png"))); // NOI18N
+        casa8_5.setOpaque(true);
+        casa8_5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel58MouseClicked(evt);
+                casa8_5MouseClicked(evt);
             }
         });
-        jPanel3.add(jLabel58, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 580, -1, -1));
+        jPanel3.add(casa8_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 580, -1, -1));
 
         jLabel59.setBackground(new java.awt.Color(255, 255, 255));
         jLabel59.setMaximumSize(new java.awt.Dimension(80, 80));
@@ -624,15 +629,15 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
         jLabel59.setPreferredSize(new java.awt.Dimension(80, 80));
         jPanel3.add(jLabel59, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 580, -1, -1));
 
-        jLabel60.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel60.setIcon(new javax.swing.ImageIcon(getClass().getResource("/trabalhoprolog/Imagens/pecaazul.png"))); // NOI18N
-        jLabel60.setOpaque(true);
-        jLabel60.addMouseListener(new java.awt.event.MouseAdapter() {
+        casa7_6.setBackground(new java.awt.Color(0, 0, 0));
+        casa7_6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/trabalhoprolog/Imagens/pecaazul.png"))); // NOI18N
+        casa7_6.setOpaque(true);
+        casa7_6.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel60MouseClicked(evt);
+                casa7_6MouseClicked(evt);
             }
         });
-        jPanel3.add(jLabel60, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 500, -1, -1));
+        jPanel3.add(casa7_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 500, -1, -1));
 
         jLabel61.setBackground(new java.awt.Color(255, 255, 255));
         jLabel61.setMaximumSize(new java.awt.Dimension(80, 80));
@@ -641,15 +646,15 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
         jLabel61.setPreferredSize(new java.awt.Dimension(80, 80));
         jPanel3.add(jLabel61, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 500, -1, -1));
 
-        jLabel62.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel62.setIcon(new javax.swing.ImageIcon(getClass().getResource("/trabalhoprolog/Imagens/pecaazul.png"))); // NOI18N
-        jLabel62.setOpaque(true);
-        jLabel62.addMouseListener(new java.awt.event.MouseAdapter() {
+        casa8_7.setBackground(new java.awt.Color(0, 0, 0));
+        casa8_7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/trabalhoprolog/Imagens/pecaazul.png"))); // NOI18N
+        casa8_7.setOpaque(true);
+        casa8_7.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel62MouseClicked(evt);
+                casa8_7MouseClicked(evt);
             }
         });
-        jPanel3.add(jLabel62, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 580, -1, -1));
+        jPanel3.add(casa8_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 580, -1, -1));
 
         jLabel63.setBackground(new java.awt.Color(255, 255, 255));
         jLabel63.setMaximumSize(new java.awt.Dimension(80, 80));
@@ -658,15 +663,15 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
         jLabel63.setPreferredSize(new java.awt.Dimension(80, 80));
         jPanel3.add(jLabel63, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 580, -1, -1));
 
-        jLabel64.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel64.setIcon(new javax.swing.ImageIcon(getClass().getResource("/trabalhoprolog/Imagens/pecaazul.png"))); // NOI18N
-        jLabel64.setOpaque(true);
-        jLabel64.addMouseListener(new java.awt.event.MouseAdapter() {
+        casa7_8.setBackground(new java.awt.Color(0, 0, 0));
+        casa7_8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/trabalhoprolog/Imagens/pecaazul.png"))); // NOI18N
+        casa7_8.setOpaque(true);
+        casa7_8.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel64MouseClicked(evt);
+                casa7_8MouseClicked(evt);
             }
         });
-        jPanel3.add(jLabel64, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 500, -1, -1));
+        jPanel3.add(casa7_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 500, -1, -1));
 
         jLabel65.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
         jLabel65.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -719,35 +724,39 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jLabel19MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel19MouseClicked
+    private void casa3_2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_casa3_2MouseClicked
         if ("".equals(posicaoAnterior)) {
-            jLabel19.setBorder(BorderFactory.createLineBorder(Color.green, 3));
+            casa3_2.setBorder(BorderFactory.createLineBorder(Color.green, 3));
             jogada = "3/2";
             posicaoAnterior = "3/2";
             System.out.println(jogada);
         } else {
-            jLabel19.setBorder(null);
+            for (int i = 0; i < casas.size(); i++) {
+                casas.get(i).setBorder(null);
+            }
             jogada += "-3/2";
             System.out.println(jogada);
             // fazer jogada
-            // if jogada = sucesso
+            //this.colocaPecas("b(n,x,n,x,n,x,n,x,x,n,x,n,x,n,x,n,n,x,n,x,n,x,n,x,e,n,e,n,e,n,e,n,n,e,n,e,n,e,n,e,o,n,o,n,o,n,o,n,n,o,n,o,n,o,n,o,o,n,o,n,o,n,o,n).");
             // else tenta jogada de novo
             jogada = "";
             posicaoAnterior = "";
 
         }
-        
-        
-    }//GEN-LAST:event_jLabel19MouseClicked
 
-    private void jLabel32MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel32MouseClicked
+
+    }//GEN-LAST:event_casa3_2MouseClicked
+
+    private void casa4_1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_casa4_1MouseClicked
         if ("".equals(posicaoAnterior)) {
-            jLabel32.setBorder(BorderFactory.createLineBorder(Color.green, 3));
+            casa4_1.setBorder(BorderFactory.createLineBorder(Color.green, 3));
             jogada = "4/1";
             posicaoAnterior = "4/1";
             System.out.println(jogada);
         } else {
-            jLabel32.setBorder(null);
+             for (int i = 0; i < casas.size(); i++) {
+                casas.get(i).setBorder(null);
+            }
             jogada += "-4/1";
             System.out.println(jogada);
             // fazer jogada
@@ -757,16 +766,19 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
             posicaoAnterior = "";
 
         }
-    }//GEN-LAST:event_jLabel32MouseClicked
+    }//GEN-LAST:event_casa4_1MouseClicked
 
-    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+    private void casa1_2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_casa1_2MouseClicked
         if ("".equals(posicaoAnterior)) {
-            jLabel1.setBorder(BorderFactory.createLineBorder(Color.green, 3));
+            casa1_2.setBorder(BorderFactory.createLineBorder(Color.green, 3));
             jogada = "1/2";
             posicaoAnterior = "1/2";
             System.out.println(jogada);
         } else {
-            jLabel1.setBorder(null);
+             for (int i = 0; i < casas.size(); i++) {
+                casas.get(i).setBorder(null);
+            }
+             
             jogada += "-1/2";
             System.out.println(jogada);
             // fazer jogada
@@ -775,16 +787,18 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
             jogada = "";
             posicaoAnterior = "";
         }
-    }//GEN-LAST:event_jLabel1MouseClicked
+    }//GEN-LAST:event_casa1_2MouseClicked
 
-    private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
+    private void casa1_4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_casa1_4MouseClicked
         if ("".equals(posicaoAnterior)) {
-            jLabel4.setBorder(BorderFactory.createLineBorder(Color.green, 3));
+            casa1_4.setBorder(BorderFactory.createLineBorder(Color.green, 3));
             jogada = "1/4";
             posicaoAnterior = "1/4";
             System.out.println(jogada);
         } else {
-            jLabel4.setBorder(null);
+             for (int i = 0; i < casas.size(); i++) {
+                casas.get(i).setBorder(null);
+            }
             jogada += "-1/4";
             System.out.println(jogada);
             // fazer jogada
@@ -793,14 +807,18 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
             jogada = "";
             posicaoAnterior = "";
         }
-    }//GEN-LAST:event_jLabel4MouseClicked
+    }//GEN-LAST:event_casa1_4MouseClicked
 
-    private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
+    private void casa1_6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_casa1_6MouseClicked
         if ("".equals(posicaoAnterior)) {
+            casa1_6.setBorder(BorderFactory.createLineBorder(Color.green, 3));
             jogada = "1/6";
             posicaoAnterior = "1/6";
             System.out.println(jogada);
         } else {
+             for (int i = 0; i < casas.size(); i++) {
+                casas.get(i).setBorder(null);
+            }
             jogada += "-1/6";
             System.out.println(jogada);
             // fazer jogada
@@ -809,14 +827,18 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
             jogada = "";
             posicaoAnterior = "";
         }
-    }//GEN-LAST:event_jLabel6MouseClicked
+    }//GEN-LAST:event_casa1_6MouseClicked
 
-    private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
+    private void casa1_8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_casa1_8MouseClicked
         if ("".equals(posicaoAnterior)) {
+            casa1_8.setBorder(BorderFactory.createLineBorder(Color.green, 3));
             jogada = "1/8";
             posicaoAnterior = "1/8";
             System.out.println(jogada);
         } else {
+             for (int i = 0; i < casas.size(); i++) {
+                casas.get(i).setBorder(null);
+            }
             jogada += "-1/8";
             System.out.println(jogada);
             // fazer jogada
@@ -825,14 +847,18 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
             jogada = "";
             posicaoAnterior = "";
         }
-    }//GEN-LAST:event_jLabel8MouseClicked
+    }//GEN-LAST:event_casa1_8MouseClicked
 
-    private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
+    private void casa2_1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_casa2_1MouseClicked
         if ("".equals(posicaoAnterior)) {
+            casa2_1.setBorder(BorderFactory.createLineBorder(Color.green, 3));
             jogada = "2/1";
             posicaoAnterior = "2/1";
             System.out.println(jogada);
         } else {
+             for (int i = 0; i < casas.size(); i++) {
+                casas.get(i).setBorder(null);
+            }
             jogada += "-2/1";
             System.out.println(jogada);
             // fazer jogada
@@ -841,14 +867,18 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
             jogada = "";
             posicaoAnterior = "";
         }
-    }//GEN-LAST:event_jLabel9MouseClicked
+    }//GEN-LAST:event_casa2_1MouseClicked
 
-    private void jLabel11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MouseClicked
+    private void casa2_3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_casa2_3MouseClicked
         if ("".equals(posicaoAnterior)) {
+            casa2_3.setBorder(BorderFactory.createLineBorder(Color.green, 3));
             jogada = "2/3";
             posicaoAnterior = "2/3";
             System.out.println(jogada);
         } else {
+             for (int i = 0; i < casas.size(); i++) {
+                casas.get(i).setBorder(null);
+            }
             jogada += "-2/3";
             System.out.println(jogada);
             // fazer jogada
@@ -857,14 +887,18 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
             jogada = "";
             posicaoAnterior = "";
         }
-    }//GEN-LAST:event_jLabel11MouseClicked
+    }//GEN-LAST:event_casa2_3MouseClicked
 
-    private void jLabel13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel13MouseClicked
+    private void casa2_5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_casa2_5MouseClicked
         if ("".equals(posicaoAnterior)) {
+            casa2_5.setBorder(BorderFactory.createLineBorder(Color.green, 3));
             jogada = "2/5";
             posicaoAnterior = "2/5";
             System.out.println(jogada);
         } else {
+             for (int i = 0; i < casas.size(); i++) {
+                casas.get(i).setBorder(null);
+            }
             jogada += "-2/5";
             System.out.println(jogada);
             // fazer jogada
@@ -873,14 +907,18 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
             jogada = "";
             posicaoAnterior = "";
         }
-    }//GEN-LAST:event_jLabel13MouseClicked
+    }//GEN-LAST:event_casa2_5MouseClicked
 
-    private void jLabel15MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel15MouseClicked
+    private void casa2_7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_casa2_7MouseClicked
         if ("".equals(posicaoAnterior)) {
+            casa2_7.setBorder(BorderFactory.createLineBorder(Color.green, 3));
             jogada = "2/7";
             posicaoAnterior = "2/7";
             System.out.println(jogada);
         } else {
+             for (int i = 0; i < casas.size(); i++) {
+                casas.get(i).setBorder(null);
+            }
             jogada += "-2/7";
             System.out.println(jogada);
             // fazer jogada
@@ -889,14 +927,18 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
             jogada = "";
             posicaoAnterior = "";
         }
-    }//GEN-LAST:event_jLabel15MouseClicked
+    }//GEN-LAST:event_casa2_7MouseClicked
 
-    private void jLabel21MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel21MouseClicked
+    private void casa3_4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_casa3_4MouseClicked
         if ("".equals(posicaoAnterior)) {
+            casa3_4.setBorder(BorderFactory.createLineBorder(Color.green, 3));
             jogada = "3/4";
             posicaoAnterior = "3/4";
             System.out.println(jogada);
         } else {
+             for (int i = 0; i < casas.size(); i++) {
+                casas.get(i).setBorder(null);
+            }
             jogada += "-3/4";
             System.out.println(jogada);
             // fazer jogada
@@ -905,14 +947,18 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
             jogada = "";
             posicaoAnterior = "";
         }
-    }//GEN-LAST:event_jLabel21MouseClicked
+    }//GEN-LAST:event_casa3_4MouseClicked
 
-    private void jLabel23MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel23MouseClicked
+    private void casa3_6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_casa3_6MouseClicked
         if ("".equals(posicaoAnterior)) {
+            casa3_6.setBorder(BorderFactory.createLineBorder(Color.green, 3));
             jogada = "3/6";
             posicaoAnterior = "3/6";
             System.out.println(jogada);
         } else {
+             for (int i = 0; i < casas.size(); i++) {
+                casas.get(i).setBorder(null);
+            }
             jogada += "-3/6";
             System.out.println(jogada);
             // fazer jogada
@@ -921,14 +967,18 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
             jogada = "";
             posicaoAnterior = "";
         }
-    }//GEN-LAST:event_jLabel23MouseClicked
+    }//GEN-LAST:event_casa3_6MouseClicked
 
-    private void jLabel25MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel25MouseClicked
+    private void casa3_8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_casa3_8MouseClicked
         if ("".equals(posicaoAnterior)) {
+            casa3_8.setBorder(BorderFactory.createLineBorder(Color.green, 3));
             jogada = "3/8";
             posicaoAnterior = "3/8";
             System.out.println(jogada);
         } else {
+             for (int i = 0; i < casas.size(); i++) {
+                casas.get(i).setBorder(null);
+            }
             jogada += "-3/8";
             System.out.println(jogada);
             // fazer jogada
@@ -937,14 +987,18 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
             jogada = "";
             posicaoAnterior = "";
         }
-    }//GEN-LAST:event_jLabel25MouseClicked
+    }//GEN-LAST:event_casa3_8MouseClicked
 
-    private void jLabel30MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel30MouseClicked
+    private void casa4_3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_casa4_3MouseClicked
         if ("".equals(posicaoAnterior)) {
+            casa4_3.setBorder(BorderFactory.createLineBorder(Color.green, 3));
             jogada = "4/3";
             posicaoAnterior = "4/3";
             System.out.println(jogada);
         } else {
+             for (int i = 0; i < casas.size(); i++) {
+                casas.get(i).setBorder(null);
+            }
             jogada += "-4/3";
             System.out.println(jogada);
             // fazer jogada
@@ -953,14 +1007,18 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
             jogada = "";
             posicaoAnterior = "";
         }
-    }//GEN-LAST:event_jLabel30MouseClicked
+    }//GEN-LAST:event_casa4_3MouseClicked
 
-    private void jLabel28MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel28MouseClicked
+    private void casa4_5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_casa4_5MouseClicked
         if ("".equals(posicaoAnterior)) {
+            casa4_5.setBorder(BorderFactory.createLineBorder(Color.green, 3));
             jogada = "4/5";
             posicaoAnterior = "4/5";
             System.out.println(jogada);
         } else {
+             for (int i = 0; i < casas.size(); i++) {
+                casas.get(i).setBorder(null);
+            }
             jogada += "-4/5";
             System.out.println(jogada);
             // fazer jogada
@@ -969,14 +1027,18 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
             jogada = "";
             posicaoAnterior = "";
         }
-    }//GEN-LAST:event_jLabel28MouseClicked
+    }//GEN-LAST:event_casa4_5MouseClicked
 
-    private void jLabel26MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel26MouseClicked
+    private void casa4_7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_casa4_7MouseClicked
         if ("".equals(posicaoAnterior)) {
+            casa4_7.setBorder(BorderFactory.createLineBorder(Color.green, 3));
             jogada = "4/7";
             posicaoAnterior = "4/7";
             System.out.println(jogada);
         } else {
+             for (int i = 0; i < casas.size(); i++) {
+                casas.get(i).setBorder(null);
+            }
             jogada += "-4/7";
             System.out.println(jogada);
             // fazer jogada
@@ -985,14 +1047,18 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
             jogada = "";
             posicaoAnterior = "";
         }
-    }//GEN-LAST:event_jLabel26MouseClicked
+    }//GEN-LAST:event_casa4_7MouseClicked
 
-    private void jLabel36MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel36MouseClicked
+    private void casa5_2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_casa5_2MouseClicked
         if ("".equals(posicaoAnterior)) {
+            casa5_2.setBorder(BorderFactory.createLineBorder(Color.green, 3));
             jogada = "5/2";
             posicaoAnterior = "5/2";
             System.out.println(jogada);
         } else {
+             for (int i = 0; i < casas.size(); i++) {
+                casas.get(i).setBorder(null);
+            }
             jogada += "-5/2";
             System.out.println(jogada);
             // fazer jogada
@@ -1001,14 +1067,18 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
             jogada = "";
             posicaoAnterior = "";
         }
-    }//GEN-LAST:event_jLabel36MouseClicked
+    }//GEN-LAST:event_casa5_2MouseClicked
 
-    private void jLabel40MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel40MouseClicked
+    private void casa5_4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_casa5_4MouseClicked
         if ("".equals(posicaoAnterior)) {
+            casa5_4.setBorder(BorderFactory.createLineBorder(Color.green, 3));
             jogada = "5/4";
             posicaoAnterior = "5/4";
             System.out.println(jogada);
         } else {
+             for (int i = 0; i < casas.size(); i++) {
+                casas.get(i).setBorder(null);
+            }
             jogada += "-5/4";
             System.out.println(jogada);
             // fazer jogada
@@ -1017,14 +1087,18 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
             jogada = "";
             posicaoAnterior = "";
         }
-    }//GEN-LAST:event_jLabel40MouseClicked
+    }//GEN-LAST:event_casa5_4MouseClicked
 
-    private void jLabel44MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel44MouseClicked
+    private void casa5_6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_casa5_6MouseClicked
         if ("".equals(posicaoAnterior)) {
+            casa5_6.setBorder(BorderFactory.createLineBorder(Color.green, 3));
             jogada = "5/6";
             posicaoAnterior = "5/6";
             System.out.println(jogada);
         } else {
+             for (int i = 0; i < casas.size(); i++) {
+                casas.get(i).setBorder(null);
+            }
             jogada += "-5/6";
             System.out.println(jogada);
             // fazer jogada
@@ -1033,14 +1107,18 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
             jogada = "";
             posicaoAnterior = "";
         }
-    }//GEN-LAST:event_jLabel44MouseClicked
+    }//GEN-LAST:event_casa5_6MouseClicked
 
-    private void jLabel48MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel48MouseClicked
+    private void casa5_8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_casa5_8MouseClicked
         if ("".equals(posicaoAnterior)) {
+            casa5_8.setBorder(BorderFactory.createLineBorder(Color.green, 3));
             jogada = "5/8";
             posicaoAnterior = "5/8";
             System.out.println(jogada);
         } else {
+             for (int i = 0; i < casas.size(); i++) {
+                casas.get(i).setBorder(null);
+            }
             jogada += "-5/8";
             System.out.println(jogada);
             // fazer jogada
@@ -1049,14 +1127,18 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
             jogada = "";
             posicaoAnterior = "";
         }
-    }//GEN-LAST:event_jLabel48MouseClicked
+    }//GEN-LAST:event_casa5_8MouseClicked
 
-    private void jLabel34MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel34MouseClicked
+    private void casa6_1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_casa6_1MouseClicked
         if ("".equals(posicaoAnterior)) {
+            casa6_1.setBorder(BorderFactory.createLineBorder(Color.green, 3));
             jogada = "6/1";
             posicaoAnterior = "6/1";
             System.out.println(jogada);
         } else {
+             for (int i = 0; i < casas.size(); i++) {
+                casas.get(i).setBorder(null);
+            }
             jogada += "-6/1";
             System.out.println(jogada);
             // fazer jogada
@@ -1065,14 +1147,18 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
             jogada = "";
             posicaoAnterior = "";
         }
-    }//GEN-LAST:event_jLabel34MouseClicked
+    }//GEN-LAST:event_casa6_1MouseClicked
 
-    private void jLabel38MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel38MouseClicked
+    private void casa6_3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_casa6_3MouseClicked
         if ("".equals(posicaoAnterior)) {
+            casa6_3.setBorder(BorderFactory.createLineBorder(Color.green, 3));
             jogada = "6/3";
             posicaoAnterior = "6/3";
             System.out.println(jogada);
         } else {
+             for (int i = 0; i < casas.size(); i++) {
+                casas.get(i).setBorder(null);
+            }
             jogada += "-6/3";
             System.out.println(jogada);
             // fazer jogada
@@ -1081,14 +1167,18 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
             jogada = "";
             posicaoAnterior = "";
         }
-    }//GEN-LAST:event_jLabel38MouseClicked
+    }//GEN-LAST:event_casa6_3MouseClicked
 
-    private void jLabel42MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel42MouseClicked
+    private void casa6_5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_casa6_5MouseClicked
         if ("".equals(posicaoAnterior)) {
+            casa6_5.setBorder(BorderFactory.createLineBorder(Color.green, 3));
             jogada = "6/5";
             posicaoAnterior = "6/5";
             System.out.println(jogada);
         } else {
+             for (int i = 0; i < casas.size(); i++) {
+                casas.get(i).setBorder(null);
+            }
             jogada += "-6/5";
             System.out.println(jogada);
             // fazer jogada
@@ -1097,14 +1187,18 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
             jogada = "";
             posicaoAnterior = "";
         }
-    }//GEN-LAST:event_jLabel42MouseClicked
+    }//GEN-LAST:event_casa6_5MouseClicked
 
-    private void jLabel46MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel46MouseClicked
+    private void casa6_7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_casa6_7MouseClicked
         if ("".equals(posicaoAnterior)) {
+            casa6_7.setBorder(BorderFactory.createLineBorder(Color.green, 3));
             jogada = "6/7";
             posicaoAnterior = "6/7";
             System.out.println(jogada);
         } else {
+             for (int i = 0; i < casas.size(); i++) {
+                casas.get(i).setBorder(null);
+            }
             jogada += "-6/7";
             System.out.println(jogada);
             // fazer jogada
@@ -1113,14 +1207,18 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
             jogada = "";
             posicaoAnterior = "";
         }
-    }//GEN-LAST:event_jLabel46MouseClicked
+    }//GEN-LAST:event_casa6_7MouseClicked
 
-    private void jLabel52MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel52MouseClicked
+    private void casa7_2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_casa7_2MouseClicked
         if ("".equals(posicaoAnterior)) {
+            casa7_2.setBorder(BorderFactory.createLineBorder(Color.green, 3));
             jogada = "7/2";
             posicaoAnterior = "7/2";
             System.out.println(jogada);
         } else {
+             for (int i = 0; i < casas.size(); i++) {
+                casas.get(i).setBorder(null);
+            }
             jogada += "-7/2";
             System.out.println(jogada);
             // fazer jogada
@@ -1129,14 +1227,18 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
             jogada = "";
             posicaoAnterior = "";
         }
-    }//GEN-LAST:event_jLabel52MouseClicked
+    }//GEN-LAST:event_casa7_2MouseClicked
 
-    private void jLabel56MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel56MouseClicked
+    private void casa7_4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_casa7_4MouseClicked
         if ("".equals(posicaoAnterior)) {
+            casa7_4.setBorder(BorderFactory.createLineBorder(Color.green, 3));
             jogada = "7/4";
             posicaoAnterior = "7/4";
             System.out.println(jogada);
         } else {
+             for (int i = 0; i < casas.size(); i++) {
+                casas.get(i).setBorder(null);
+            }
             jogada += "-7/4";
             System.out.println(jogada);
             // fazer jogada
@@ -1145,14 +1247,18 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
             jogada = "";
             posicaoAnterior = "";
         }
-    }//GEN-LAST:event_jLabel56MouseClicked
+    }//GEN-LAST:event_casa7_4MouseClicked
 
-    private void jLabel60MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel60MouseClicked
+    private void casa7_6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_casa7_6MouseClicked
         if ("".equals(posicaoAnterior)) {
+            casa7_6.setBorder(BorderFactory.createLineBorder(Color.green, 3));
             jogada = "7/6";
             posicaoAnterior = "7/6";
             System.out.println(jogada);
         } else {
+             for (int i = 0; i < casas.size(); i++) {
+                casas.get(i).setBorder(null);
+            }
             jogada += "-7/6";
             System.out.println(jogada);
             // fazer jogada
@@ -1161,14 +1267,18 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
             jogada = "";
             posicaoAnterior = "";
         }
-    }//GEN-LAST:event_jLabel60MouseClicked
+    }//GEN-LAST:event_casa7_6MouseClicked
 
-    private void jLabel64MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel64MouseClicked
+    private void casa7_8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_casa7_8MouseClicked
         if ("".equals(posicaoAnterior)) {
+            casa7_8.setBorder(BorderFactory.createLineBorder(Color.green, 3));
             jogada = "7/8";
             posicaoAnterior = "7/8";
             System.out.println(jogada);
         } else {
+             for (int i = 0; i < casas.size(); i++) {
+                casas.get(i).setBorder(null);
+            }
             jogada += "-7/8";
             System.out.println(jogada);
             // fazer jogada
@@ -1177,14 +1287,18 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
             jogada = "";
             posicaoAnterior = "";
         }
-    }//GEN-LAST:event_jLabel64MouseClicked
+    }//GEN-LAST:event_casa7_8MouseClicked
 
-    private void jLabel50MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel50MouseClicked
+    private void casa8_1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_casa8_1MouseClicked
         if ("".equals(posicaoAnterior)) {
+            casa8_1.setBorder(BorderFactory.createLineBorder(Color.green, 3));
             jogada = "8/1";
             posicaoAnterior = "8/1";
             System.out.println(jogada);
         } else {
+             for (int i = 0; i < casas.size(); i++) {
+                casas.get(i).setBorder(null);
+            }
             jogada += "-8/1";
             System.out.println(jogada);
             // fazer jogada
@@ -1193,14 +1307,18 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
             jogada = "";
             posicaoAnterior = "";
         }
-    }//GEN-LAST:event_jLabel50MouseClicked
+    }//GEN-LAST:event_casa8_1MouseClicked
 
-    private void jLabel54MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel54MouseClicked
+    private void casa8_3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_casa8_3MouseClicked
         if ("".equals(posicaoAnterior)) {
+            casa8_3.setBorder(BorderFactory.createLineBorder(Color.green, 3));
             jogada = "8/3";
             posicaoAnterior = "8/3";
             System.out.println(jogada);
         } else {
+             for (int i = 0; i < casas.size(); i++) {
+                casas.get(i).setBorder(null);
+            }
             jogada += "-8/3";
             System.out.println(jogada);
             // fazer jogada
@@ -1209,14 +1327,18 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
             jogada = "";
             posicaoAnterior = "";
         }
-    }//GEN-LAST:event_jLabel54MouseClicked
+    }//GEN-LAST:event_casa8_3MouseClicked
 
-    private void jLabel58MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel58MouseClicked
+    private void casa8_5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_casa8_5MouseClicked
         if ("".equals(posicaoAnterior)) {
+            casa8_5.setBorder(BorderFactory.createLineBorder(Color.green, 3));
             jogada = "8/5";
             posicaoAnterior = "8/5";
             System.out.println(jogada);
         } else {
+             for (int i = 0; i < casas.size(); i++) {
+                casas.get(i).setBorder(null);
+            }
             jogada += "-8/5";
             System.out.println(jogada);
             // fazer jogada
@@ -1225,14 +1347,18 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
             jogada = "";
             posicaoAnterior = "";
         }
-    }//GEN-LAST:event_jLabel58MouseClicked
+    }//GEN-LAST:event_casa8_5MouseClicked
 
-    private void jLabel62MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel62MouseClicked
+    private void casa8_7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_casa8_7MouseClicked
         if ("".equals(posicaoAnterior)) {
+            casa8_7.setBorder(BorderFactory.createLineBorder(Color.green, 3));
             jogada = "8/7";
             posicaoAnterior = "8/7";
             System.out.println(jogada);
         } else {
+             for (int i = 0; i < casas.size(); i++) {
+                casas.get(i).setBorder(null);
+            }
             jogada += "-8/7";
             System.out.println(jogada);
             // fazer jogada
@@ -1241,7 +1367,7 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
             jogada = "";
             posicaoAnterior = "";
         }
-    }//GEN-LAST:event_jLabel62MouseClicked
+    }//GEN-LAST:event_casa8_7MouseClicked
 
     /**
      * @param args the command line arguments
@@ -1271,74 +1397,186 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
                 new TrabalhoDamas_Tabuleiro().setVisible(true);
             }
         });
+        
+        
+        
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel casa1_2;
+    private javax.swing.JLabel casa1_4;
+    private javax.swing.JLabel casa1_6;
+    private javax.swing.JLabel casa1_8;
+    private javax.swing.JLabel casa2_1;
+    private javax.swing.JLabel casa2_3;
+    private javax.swing.JLabel casa2_5;
+    private javax.swing.JLabel casa2_7;
+    private javax.swing.JLabel casa3_2;
+    private javax.swing.JLabel casa3_4;
+    private javax.swing.JLabel casa3_6;
+    private javax.swing.JLabel casa3_8;
+    private javax.swing.JLabel casa4_1;
+    private javax.swing.JLabel casa4_3;
+    private javax.swing.JLabel casa4_5;
+    private javax.swing.JLabel casa4_7;
+    private javax.swing.JLabel casa5_2;
+    private javax.swing.JLabel casa5_4;
+    private javax.swing.JLabel casa5_6;
+    private javax.swing.JLabel casa5_8;
+    private javax.swing.JLabel casa6_1;
+    private javax.swing.JLabel casa6_3;
+    private javax.swing.JLabel casa6_5;
+    private javax.swing.JLabel casa6_7;
+    private javax.swing.JLabel casa7_2;
+    private javax.swing.JLabel casa7_4;
+    private javax.swing.JLabel casa7_6;
+    private javax.swing.JLabel casa7_8;
+    private javax.swing.JLabel casa8_1;
+    private javax.swing.JLabel casa8_3;
+    private javax.swing.JLabel casa8_5;
+    private javax.swing.JLabel casa8_7;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
-    private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
-    private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel33;
-    private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel35;
-    private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel37;
-    private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel39;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel41;
-    private javax.swing.JLabel jLabel42;
     private javax.swing.JLabel jLabel43;
-    private javax.swing.JLabel jLabel44;
     private javax.swing.JLabel jLabel45;
-    private javax.swing.JLabel jLabel46;
     private javax.swing.JLabel jLabel47;
-    private javax.swing.JLabel jLabel48;
     private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel50;
     private javax.swing.JLabel jLabel51;
-    private javax.swing.JLabel jLabel52;
     private javax.swing.JLabel jLabel53;
-    private javax.swing.JLabel jLabel54;
     private javax.swing.JLabel jLabel55;
-    private javax.swing.JLabel jLabel56;
     private javax.swing.JLabel jLabel57;
-    private javax.swing.JLabel jLabel58;
     private javax.swing.JLabel jLabel59;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel60;
     private javax.swing.JLabel jLabel61;
-    private javax.swing.JLabel jLabel62;
     private javax.swing.JLabel jLabel63;
-    private javax.swing.JLabel jLabel64;
     private javax.swing.JLabel jLabel65;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
     // End of variables declaration//GEN-END:variables
+
+    private ArrayList<JLabel> criarListaJLabel() {
+        ArrayList<JLabel> listaJLabel = new ArrayList<>();
+        listaJLabel.add(casa1_2);
+        listaJLabel.add(casa1_4);
+        listaJLabel.add(casa1_6);
+        listaJLabel.add(casa1_8);
+        listaJLabel.add(casa2_1);
+        listaJLabel.add(casa2_3);
+        listaJLabel.add(casa2_5);
+        listaJLabel.add(casa2_7);
+        listaJLabel.add(casa3_2);
+        listaJLabel.add(casa3_4);
+        listaJLabel.add(casa3_6);
+        listaJLabel.add(casa3_8);
+        listaJLabel.add(casa4_1);
+        listaJLabel.add(casa4_3);
+        listaJLabel.add(casa4_5);
+        listaJLabel.add(casa4_7);
+        listaJLabel.add(casa5_2);
+        listaJLabel.add(casa5_4);
+        listaJLabel.add(casa5_6);
+        listaJLabel.add(casa5_8);
+        listaJLabel.add(casa6_1);
+        listaJLabel.add(casa6_3);
+        listaJLabel.add(casa6_5);
+        listaJLabel.add(casa6_7);
+        listaJLabel.add(casa7_2);
+        listaJLabel.add(casa7_4);
+        listaJLabel.add(casa7_6);
+        listaJLabel.add(casa7_8);
+        listaJLabel.add(casa8_1);
+        listaJLabel.add(casa8_3);
+        listaJLabel.add(casa8_5);
+        listaJLabel.add(casa8_7);
+
+
+
+        return listaJLabel;
+    }
+
+    private void colocaPecas(String string) {
+        char peao;
+        ImageIcon pecaBranca = new javax.swing.ImageIcon(getClass().getResource("/trabalhoprolog/Imagens/pecabranca.png"));
+        ImageIcon pecaAzul = new javax.swing.ImageIcon(getClass().getResource("/trabalhoprolog/Imagens/pecaazul.png"));
+        ImageIcon damaBranca = new javax.swing.ImageIcon(getClass().getResource("/trabalhoprolog/Imagens/damabranca.png"));
+        ImageIcon damaAzul = new javax.swing.ImageIcon(getClass().getResource("/trabalhoprolog/Imagens/damaAzul.png"));
+        ImageIcon vazio = null;
+        ImageIcon casa;
+        ArrayList<Integer> salto = new ArrayList<Integer>();
+        salto.add(4);
+        salto.add(8);
+        salto.add(12);
+        salto.add(16);
+        salto.add(18);
+        salto.add(22);
+        salto.add(26);
+        salto.add(30);
+       
+        salto.add(36);
+        salto.add(40);
+        salto.add(44);
+        salto.add(48);
+        salto.add(50);
+        salto.add(54);
+        salto.add(58);
+        salto.add(62);
+        
+        salto.add(68);
+        salto.add(72);
+        salto.add(76);
+        salto.add(80);
+        salto.add(82);
+        salto.add(86);
+        salto.add(90);
+        salto.add(94);
+        
+        salto.add(100);
+        salto.add(104);
+        salto.add(108);
+        salto.add(112);
+        salto.add(114);
+        salto.add(118);
+        salto.add(122);
+        salto.add(126);
+        
+        int posicao = 0;
+        
+        
+        for (int i = 0; i < casas.size(); i++) {
+            posicao = salto.get(i);
+            peao = string.charAt(posicao);
+            if(peao == 'x'){
+                casa = pecaBranca;
+            }else if(peao == 'o'){
+                casa = pecaAzul;
+            }else if(peao == 'a'){
+                casa = damaBranca;
+            }else if(peao == 'b' ){
+                casa = damaAzul;
+            }else{
+                casa = vazio;
+            }
+            JLabel atual =  casas.get(i);
+            atual.setIcon(casa);
+            
+            
+         }
+    }
 }
