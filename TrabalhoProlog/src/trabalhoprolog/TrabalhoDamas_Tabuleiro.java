@@ -5,7 +5,6 @@
 package trabalhoprolog;
 
 import java.awt.Color;
-import java.awt.List;
 import java.util.ArrayList;
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
@@ -20,6 +19,8 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
     private String posicaoAnterior = "";
     private String jogada = "";
     private ArrayList<JLabel> casas;
+    private String tabuleiro = "";
+    private String movimento;
 
     /**
      * Creates new form TrabalhoDamas_Tabuleiro
@@ -736,9 +737,10 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
             }
             jogada += "-3/2";
             System.out.println(jogada);
-            // fazer jogada
-            //this.colocaPecas("b(n,x,n,x,n,x,n,x,x,n,x,n,x,n,x,n,n,x,n,x,n,x,n,x,e,n,e,n,e,n,e,n,n,e,n,e,n,e,n,e,o,n,o,n,o,n,o,n,n,o,n,o,n,o,n,o,o,n,o,n,o,n,o,n).");
-            // else tenta jogada de novo
+
+            //this.colocaPecas("b(n,e,n,x,n,x,n,x,x,n,x,n,x,n,x,n,n,x,n,x,n,x,n,x,e,n,e,n,e,n,e,n,n,e,n,e,n,e,n,e,o,n,o,n,o,n,o,n,n,o,n,o,n,o,n,o,o,n,o,n,o,n,o,n).");
+            this.movimento = jogada;
+
             jogada = "";
             posicaoAnterior = "";
 
@@ -754,14 +756,14 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
             posicaoAnterior = "4/1";
             System.out.println(jogada);
         } else {
-             for (int i = 0; i < casas.size(); i++) {
+            for (int i = 0; i < casas.size(); i++) {
                 casas.get(i).setBorder(null);
             }
             jogada += "-4/1";
             System.out.println(jogada);
-            // fazer jogada
-            // if jogada = sucesso
-            // else tenta jogada de novo
+           
+            this.movimento = jogada;
+            
             jogada = "";
             posicaoAnterior = "";
 
@@ -775,15 +777,15 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
             posicaoAnterior = "1/2";
             System.out.println(jogada);
         } else {
-             for (int i = 0; i < casas.size(); i++) {
+            for (int i = 0; i < casas.size(); i++) {
                 casas.get(i).setBorder(null);
             }
-             
+
             jogada += "-1/2";
             System.out.println(jogada);
-            // fazer jogada
-            // if jogada = sucesso
-            // else tenta jogada de novo
+          
+             this.movimento = jogada;
+            
             jogada = "";
             posicaoAnterior = "";
         }
@@ -796,14 +798,14 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
             posicaoAnterior = "1/4";
             System.out.println(jogada);
         } else {
-             for (int i = 0; i < casas.size(); i++) {
+            for (int i = 0; i < casas.size(); i++) {
                 casas.get(i).setBorder(null);
             }
             jogada += "-1/4";
             System.out.println(jogada);
-            // fazer jogada
-            // if jogada = sucesso
-            // else tenta jogada de novo
+           
+            this.movimento = jogada;
+            
             jogada = "";
             posicaoAnterior = "";
         }
@@ -816,14 +818,14 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
             posicaoAnterior = "1/6";
             System.out.println(jogada);
         } else {
-             for (int i = 0; i < casas.size(); i++) {
+            for (int i = 0; i < casas.size(); i++) {
                 casas.get(i).setBorder(null);
             }
             jogada += "-1/6";
             System.out.println(jogada);
-            // fazer jogada
-            // if jogada = sucesso
-            // else tenta jogada de novo
+            
+            this.movimento = jogada;
+            
             jogada = "";
             posicaoAnterior = "";
         }
@@ -836,14 +838,14 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
             posicaoAnterior = "1/8";
             System.out.println(jogada);
         } else {
-             for (int i = 0; i < casas.size(); i++) {
+            for (int i = 0; i < casas.size(); i++) {
                 casas.get(i).setBorder(null);
             }
             jogada += "-1/8";
             System.out.println(jogada);
-            // fazer jogada
-            // if jogada = sucesso
-            // else tenta jogada de novo
+           
+            this.movimento = jogada;
+            
             jogada = "";
             posicaoAnterior = "";
         }
@@ -856,14 +858,14 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
             posicaoAnterior = "2/1";
             System.out.println(jogada);
         } else {
-             for (int i = 0; i < casas.size(); i++) {
+            for (int i = 0; i < casas.size(); i++) {
                 casas.get(i).setBorder(null);
             }
             jogada += "-2/1";
             System.out.println(jogada);
-            // fazer jogada
-            // if jogada = sucesso
-            // else tenta jogada de novo
+          
+            this.movimento = jogada;
+            
             jogada = "";
             posicaoAnterior = "";
         }
@@ -876,14 +878,14 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
             posicaoAnterior = "2/3";
             System.out.println(jogada);
         } else {
-             for (int i = 0; i < casas.size(); i++) {
+            for (int i = 0; i < casas.size(); i++) {
                 casas.get(i).setBorder(null);
             }
             jogada += "-2/3";
             System.out.println(jogada);
-            // fazer jogada
-            // if jogada = sucesso
-            // else tenta jogada de novo
+       
+            this.movimento = jogada;
+            
             jogada = "";
             posicaoAnterior = "";
         }
@@ -896,14 +898,14 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
             posicaoAnterior = "2/5";
             System.out.println(jogada);
         } else {
-             for (int i = 0; i < casas.size(); i++) {
+            for (int i = 0; i < casas.size(); i++) {
                 casas.get(i).setBorder(null);
             }
             jogada += "-2/5";
             System.out.println(jogada);
-            // fazer jogada
-            // if jogada = sucesso
-            // else tenta jogada de novo
+        
+            this.movimento = jogada;
+            
             jogada = "";
             posicaoAnterior = "";
         }
@@ -916,14 +918,14 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
             posicaoAnterior = "2/7";
             System.out.println(jogada);
         } else {
-             for (int i = 0; i < casas.size(); i++) {
+            for (int i = 0; i < casas.size(); i++) {
                 casas.get(i).setBorder(null);
             }
             jogada += "-2/7";
             System.out.println(jogada);
-            // fazer jogada
-            // if jogada = sucesso
-            // else tenta jogada de novo
+          
+            this.movimento = jogada;
+            
             jogada = "";
             posicaoAnterior = "";
         }
@@ -936,14 +938,14 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
             posicaoAnterior = "3/4";
             System.out.println(jogada);
         } else {
-             for (int i = 0; i < casas.size(); i++) {
+            for (int i = 0; i < casas.size(); i++) {
                 casas.get(i).setBorder(null);
             }
             jogada += "-3/4";
             System.out.println(jogada);
-            // fazer jogada
-            // if jogada = sucesso
-            // else tenta jogada de novo
+          
+            this.movimento = jogada;
+            
             jogada = "";
             posicaoAnterior = "";
         }
@@ -956,14 +958,14 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
             posicaoAnterior = "3/6";
             System.out.println(jogada);
         } else {
-             for (int i = 0; i < casas.size(); i++) {
+            for (int i = 0; i < casas.size(); i++) {
                 casas.get(i).setBorder(null);
             }
             jogada += "-3/6";
             System.out.println(jogada);
-            // fazer jogada
-            // if jogada = sucesso
-            // else tenta jogada de novo
+         
+            this.movimento = jogada;
+            
             jogada = "";
             posicaoAnterior = "";
         }
@@ -976,14 +978,14 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
             posicaoAnterior = "3/8";
             System.out.println(jogada);
         } else {
-             for (int i = 0; i < casas.size(); i++) {
+            for (int i = 0; i < casas.size(); i++) {
                 casas.get(i).setBorder(null);
             }
             jogada += "-3/8";
             System.out.println(jogada);
-            // fazer jogada
-            // if jogada = sucesso
-            // else tenta jogada de novo
+        
+            this.movimento = jogada;
+            
             jogada = "";
             posicaoAnterior = "";
         }
@@ -996,14 +998,14 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
             posicaoAnterior = "4/3";
             System.out.println(jogada);
         } else {
-             for (int i = 0; i < casas.size(); i++) {
+            for (int i = 0; i < casas.size(); i++) {
                 casas.get(i).setBorder(null);
             }
             jogada += "-4/3";
             System.out.println(jogada);
-            // fazer jogada
-            // if jogada = sucesso
-            // else tenta jogada de novo
+        
+            this.movimento = jogada;
+            
             jogada = "";
             posicaoAnterior = "";
         }
@@ -1016,14 +1018,14 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
             posicaoAnterior = "4/5";
             System.out.println(jogada);
         } else {
-             for (int i = 0; i < casas.size(); i++) {
+            for (int i = 0; i < casas.size(); i++) {
                 casas.get(i).setBorder(null);
             }
             jogada += "-4/5";
             System.out.println(jogada);
-            // fazer jogada
-            // if jogada = sucesso
-            // else tenta jogada de novo
+         
+            this.movimento = jogada;
+            
             jogada = "";
             posicaoAnterior = "";
         }
@@ -1036,14 +1038,14 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
             posicaoAnterior = "4/7";
             System.out.println(jogada);
         } else {
-             for (int i = 0; i < casas.size(); i++) {
+            for (int i = 0; i < casas.size(); i++) {
                 casas.get(i).setBorder(null);
             }
             jogada += "-4/7";
             System.out.println(jogada);
-            // fazer jogada
-            // if jogada = sucesso
-            // else tenta jogada de novo
+          
+            this.movimento = jogada;
+            
             jogada = "";
             posicaoAnterior = "";
         }
@@ -1056,14 +1058,14 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
             posicaoAnterior = "5/2";
             System.out.println(jogada);
         } else {
-             for (int i = 0; i < casas.size(); i++) {
+            for (int i = 0; i < casas.size(); i++) {
                 casas.get(i).setBorder(null);
             }
             jogada += "-5/2";
             System.out.println(jogada);
-            // fazer jogada
-            // if jogada = sucesso
-            // else tenta jogada de novo
+          
+            this.movimento = jogada;
+            
             jogada = "";
             posicaoAnterior = "";
         }
@@ -1076,14 +1078,14 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
             posicaoAnterior = "5/4";
             System.out.println(jogada);
         } else {
-             for (int i = 0; i < casas.size(); i++) {
+            for (int i = 0; i < casas.size(); i++) {
                 casas.get(i).setBorder(null);
             }
             jogada += "-5/4";
             System.out.println(jogada);
-            // fazer jogada
-            // if jogada = sucesso
-            // else tenta jogada de novo
+      
+            this.movimento = jogada;
+            
             jogada = "";
             posicaoAnterior = "";
         }
@@ -1096,14 +1098,14 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
             posicaoAnterior = "5/6";
             System.out.println(jogada);
         } else {
-             for (int i = 0; i < casas.size(); i++) {
+            for (int i = 0; i < casas.size(); i++) {
                 casas.get(i).setBorder(null);
             }
             jogada += "-5/6";
             System.out.println(jogada);
-            // fazer jogada
-            // if jogada = sucesso
-            // else tenta jogada de novo
+         
+            this.movimento = jogada;
+            
             jogada = "";
             posicaoAnterior = "";
         }
@@ -1116,14 +1118,14 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
             posicaoAnterior = "5/8";
             System.out.println(jogada);
         } else {
-             for (int i = 0; i < casas.size(); i++) {
+            for (int i = 0; i < casas.size(); i++) {
                 casas.get(i).setBorder(null);
             }
             jogada += "-5/8";
             System.out.println(jogada);
-            // fazer jogada
-            // if jogada = sucesso
-            // else tenta jogada de novo
+         
+            this.movimento = jogada;
+            
             jogada = "";
             posicaoAnterior = "";
         }
@@ -1136,14 +1138,14 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
             posicaoAnterior = "6/1";
             System.out.println(jogada);
         } else {
-             for (int i = 0; i < casas.size(); i++) {
+            for (int i = 0; i < casas.size(); i++) {
                 casas.get(i).setBorder(null);
             }
             jogada += "-6/1";
             System.out.println(jogada);
-            // fazer jogada
-            // if jogada = sucesso
-            // else tenta jogada de novo
+           
+            this.movimento = jogada;
+            
             jogada = "";
             posicaoAnterior = "";
         }
@@ -1156,14 +1158,14 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
             posicaoAnterior = "6/3";
             System.out.println(jogada);
         } else {
-             for (int i = 0; i < casas.size(); i++) {
+            for (int i = 0; i < casas.size(); i++) {
                 casas.get(i).setBorder(null);
             }
             jogada += "-6/3";
             System.out.println(jogada);
-            // fazer jogada
-            // if jogada = sucesso
-            // else tenta jogada de novo
+      
+            this.movimento = jogada;
+            
             jogada = "";
             posicaoAnterior = "";
         }
@@ -1176,14 +1178,14 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
             posicaoAnterior = "6/5";
             System.out.println(jogada);
         } else {
-             for (int i = 0; i < casas.size(); i++) {
+            for (int i = 0; i < casas.size(); i++) {
                 casas.get(i).setBorder(null);
             }
             jogada += "-6/5";
             System.out.println(jogada);
-            // fazer jogada
-            // if jogada = sucesso
-            // else tenta jogada de novo
+         
+            this.movimento = jogada;
+            
             jogada = "";
             posicaoAnterior = "";
         }
@@ -1196,14 +1198,14 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
             posicaoAnterior = "6/7";
             System.out.println(jogada);
         } else {
-             for (int i = 0; i < casas.size(); i++) {
+            for (int i = 0; i < casas.size(); i++) {
                 casas.get(i).setBorder(null);
             }
             jogada += "-6/7";
             System.out.println(jogada);
-            // fazer jogada
-            // if jogada = sucesso
-            // else tenta jogada de novo
+      
+            this.movimento = jogada;
+            
             jogada = "";
             posicaoAnterior = "";
         }
@@ -1216,14 +1218,14 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
             posicaoAnterior = "7/2";
             System.out.println(jogada);
         } else {
-             for (int i = 0; i < casas.size(); i++) {
+            for (int i = 0; i < casas.size(); i++) {
                 casas.get(i).setBorder(null);
             }
             jogada += "-7/2";
             System.out.println(jogada);
-            // fazer jogada
-            // if jogada = sucesso
-            // else tenta jogada de novo
+         
+            this.movimento = jogada;
+            
             jogada = "";
             posicaoAnterior = "";
         }
@@ -1236,14 +1238,14 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
             posicaoAnterior = "7/4";
             System.out.println(jogada);
         } else {
-             for (int i = 0; i < casas.size(); i++) {
+            for (int i = 0; i < casas.size(); i++) {
                 casas.get(i).setBorder(null);
             }
             jogada += "-7/4";
             System.out.println(jogada);
-            // fazer jogada
-            // if jogada = sucesso
-            // else tenta jogada de novo
+         
+            this.movimento = jogada;
+            
             jogada = "";
             posicaoAnterior = "";
         }
@@ -1256,14 +1258,14 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
             posicaoAnterior = "7/6";
             System.out.println(jogada);
         } else {
-             for (int i = 0; i < casas.size(); i++) {
+            for (int i = 0; i < casas.size(); i++) {
                 casas.get(i).setBorder(null);
             }
             jogada += "-7/6";
             System.out.println(jogada);
-            // fazer jogada
-            // if jogada = sucesso
-            // else tenta jogada de novo
+     
+            this.movimento = jogada;
+            
             jogada = "";
             posicaoAnterior = "";
         }
@@ -1276,14 +1278,14 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
             posicaoAnterior = "7/8";
             System.out.println(jogada);
         } else {
-             for (int i = 0; i < casas.size(); i++) {
+            for (int i = 0; i < casas.size(); i++) {
                 casas.get(i).setBorder(null);
             }
             jogada += "-7/8";
             System.out.println(jogada);
-            // fazer jogada
-            // if jogada = sucesso
-            // else tenta jogada de novo
+   
+            this.movimento = jogada;
+            
             jogada = "";
             posicaoAnterior = "";
         }
@@ -1296,14 +1298,14 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
             posicaoAnterior = "8/1";
             System.out.println(jogada);
         } else {
-             for (int i = 0; i < casas.size(); i++) {
+            for (int i = 0; i < casas.size(); i++) {
                 casas.get(i).setBorder(null);
             }
             jogada += "-8/1";
             System.out.println(jogada);
-            // fazer jogada
-            // if jogada = sucesso
-            // else tenta jogada de novo
+         
+            this.movimento = jogada;
+            
             jogada = "";
             posicaoAnterior = "";
         }
@@ -1316,14 +1318,14 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
             posicaoAnterior = "8/3";
             System.out.println(jogada);
         } else {
-             for (int i = 0; i < casas.size(); i++) {
+            for (int i = 0; i < casas.size(); i++) {
                 casas.get(i).setBorder(null);
             }
             jogada += "-8/3";
             System.out.println(jogada);
-            // fazer jogada
-            // if jogada = sucesso
-            // else tenta jogada de novo
+      
+            this.movimento = jogada;
+            
             jogada = "";
             posicaoAnterior = "";
         }
@@ -1336,14 +1338,14 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
             posicaoAnterior = "8/5";
             System.out.println(jogada);
         } else {
-             for (int i = 0; i < casas.size(); i++) {
+            for (int i = 0; i < casas.size(); i++) {
                 casas.get(i).setBorder(null);
             }
             jogada += "-8/5";
             System.out.println(jogada);
-            // fazer jogada
-            // if jogada = sucesso
-            // else tenta jogada de novo
+         
+            this.movimento = jogada;
+            
             jogada = "";
             posicaoAnterior = "";
         }
@@ -1356,14 +1358,14 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
             posicaoAnterior = "8/7";
             System.out.println(jogada);
         } else {
-             for (int i = 0; i < casas.size(); i++) {
+            for (int i = 0; i < casas.size(); i++) {
                 casas.get(i).setBorder(null);
             }
             jogada += "-8/7";
             System.out.println(jogada);
-            // fazer jogada
-            // if jogada = sucesso
-            // else tenta jogada de novo
+
+            this.movimento = jogada;
+            
             jogada = "";
             posicaoAnterior = "";
         }
@@ -1391,15 +1393,10 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            @Override
-            public void run() {
-                new TrabalhoDamas_Tabuleiro().setVisible(true);
-            }
-        });
-        
-        
-        
+       
+
+
+
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel casa1_2;
@@ -1510,16 +1507,21 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
 
         return listaJLabel;
     }
+    
+    public String pegarMovimento(){
+        return this.movimento;
+    }
 
-    private void colocaPecas(String string) {
+    public void colocaPecas(String string) {
         char peao;
         ImageIcon pecaBranca = new javax.swing.ImageIcon(getClass().getResource("/trabalhoprolog/Imagens/pecabranca.png"));
         ImageIcon pecaAzul = new javax.swing.ImageIcon(getClass().getResource("/trabalhoprolog/Imagens/pecaazul.png"));
         ImageIcon damaBranca = new javax.swing.ImageIcon(getClass().getResource("/trabalhoprolog/Imagens/damabranca.png"));
         ImageIcon damaAzul = new javax.swing.ImageIcon(getClass().getResource("/trabalhoprolog/Imagens/damaAzul.png"));
-        ImageIcon vazio = null;
+        ImageIcon vazio = new ImageIcon(getClass().getResource("/trabalhoprolog/Imagens/casaPreta.png"));
+
         ImageIcon casa;
-        ArrayList<Integer> salto = new ArrayList<Integer>();
+        ArrayList<Integer> salto = new ArrayList<>();
         salto.add(4);
         salto.add(8);
         salto.add(12);
@@ -1528,7 +1530,7 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
         salto.add(22);
         salto.add(26);
         salto.add(30);
-       
+
         salto.add(36);
         salto.add(40);
         salto.add(44);
@@ -1537,7 +1539,7 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
         salto.add(54);
         salto.add(58);
         salto.add(62);
-        
+
         salto.add(68);
         salto.add(72);
         salto.add(76);
@@ -1546,7 +1548,7 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
         salto.add(86);
         salto.add(90);
         salto.add(94);
-        
+
         salto.add(100);
         salto.add(104);
         salto.add(108);
@@ -1555,28 +1557,28 @@ public class TrabalhoDamas_Tabuleiro extends javax.swing.JFrame {
         salto.add(118);
         salto.add(122);
         salto.add(126);
-        
+
         int posicao = 0;
-        
-        
+
+
         for (int i = 0; i < casas.size(); i++) {
             posicao = salto.get(i);
             peao = string.charAt(posicao);
-            if(peao == 'x'){
+            if (peao == 'x') {
                 casa = pecaBranca;
-            }else if(peao == 'o'){
+            } else if (peao == 'o') {
                 casa = pecaAzul;
-            }else if(peao == 'a'){
+            } else if (peao == 'c') {
                 casa = damaBranca;
-            }else if(peao == 'b' ){
+            } else if (peao == 'p') {
                 casa = damaAzul;
-            }else{
+            } else {
                 casa = vazio;
             }
-            JLabel atual =  casas.get(i);
+            JLabel atual = casas.get(i);
             atual.setIcon(casa);
-            
-            
-         }
+
+
+        }
     }
 }
